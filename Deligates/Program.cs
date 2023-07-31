@@ -6,7 +6,9 @@ namespace Deligates
     {
         public static void Main(string[] args)
         {
-            ArrayDeligates.Implementation();
+            ArrayDeligates.SingleCastDelegate();
+            Console.WriteLine("-------------");
+            ArrayDeligates.MultiCastDelegate();
 
         }
     }

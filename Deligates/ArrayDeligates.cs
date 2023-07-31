@@ -6,7 +6,7 @@ namespace Deligates
     {
         delegate void DelOP(int x, int y);
         
-        public static void Implementation()
+        public static void SingleCastDelegate()
         {
             DelOP[] op =
             {
@@ -19,6 +19,13 @@ namespace Deligates
                 op[i](3, 4);
                 op[i](6, 2);
             }
-        }        
+        }      
+        public static void MultiCastDelegate()
+        {
+            DelOP op = Operation.Add;
+            op += Operation.Sub;
+            op(3, 4);
+            op(6, 2);
+        }
     }
 }
